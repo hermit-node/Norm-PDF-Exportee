@@ -1,0 +1,26 @@
+/* NormPDF report template */
+@page {size: Letter; margin: 23mm 19mm 21mm;
+  @top-right { content: string(documentTitle); font: 8.5pt sans-serif; color:#667085; }
+  @bottom-center { content: "Page " counter(page) " of " counter(pages); font: 8pt sans-serif; }}
+body {font: 10.5pt/1.6 Georgia, "Times New Roman", serif; color:#202733;}
+h1 {string-set: documentTitle content(); bookmark-level: none;}
+.turn-heading {bookmark-level: 1; break-after: avoid; color: #183b5c; border-bottom: 1pt solid #aebfcd;}
+.prompt-card {background: #f4f6f8!important; padding: 10pt 12pt;}
+.assistant-card {border-left: 2pt solid #d5dbe3; padding: 4pt 12pt;}
+pre, table {break-inside: avoid;}
+a {color:#1d4d89;}
+
+/* NormPDF 0.2: page-safe image prompts and structured summaries. */
+.turn-heading { break-after: avoid-page !important; }
+.single-image-turn .prompt-card { break-inside: avoid-page !important; }
+.norm-image-gallery figure { break-inside: avoid-page !important; max-width: 100%; }
+.norm-image-gallery img { max-width: 100% !important; max-height: 94mm !important; height: auto !important; object-fit: contain; }
+.norm-image-gallery figcaption { font-size: 8pt; }
+.reasoning-segment .norm-quote { break-inside: auto !important; }
+.reasoning-segment .norm-quote p { margin: 0 0 4pt; white-space: normal; }
+.citation-unresolved { font-size: 8pt; color: #677586 !important; }
+
+/* Resolved assistant images: compact figures. */
+.norm-rich-gallery figure { display: inline-block; vertical-align: top; width: 47%; margin: 4px 1%; padding: 4px; break-inside: avoid-page !important; }
+.norm-rich-gallery img { max-height: 48mm !important; max-width: 100% !important; height: auto !important; object-fit: contain; }
+.turn-sources { break-inside: auto; }

@@ -1,0 +1,38 @@
+/* NormPDF conversation template. All turn bookmarks come from the HTML renderer. */
+@page {
+  size: A4;
+  margin: 20mm 17mm 20mm;
+  @top-left { content: string(documentTitle); color: #66758a; font: 9pt sans-serif; }
+  @bottom-right { content: counter(page) " / " counter(pages); color: #66758a; font: 9pt sans-serif; }
+}
+html, body { background: #fff !important; color: #1c2736 !important; }
+body { font-family: "Segoe UI", "DejaVu Sans", sans-serif; line-height: 1.53; font-size: 10.5pt; }
+h1 { string-set: documentTitle content(); bookmark-level: none; }
+.turn-heading { bookmark-level: 1; bookmark-label: content(text); break-after: avoid; font-size: 12.5pt; }
+.turn { margin-bottom: 12pt; break-inside: auto; }
+.message-meta, .segment-time { break-after: avoid; }
+.prompt-card { background: #f1f4f8 !important; border-left: 3pt solid #72849c !important; padding: 9pt 11pt; }
+.assistant-card { border-left: 1.5pt solid #cad5e1 !important; padding-left: 10pt; }
+.reasoning-segment { background: #f7f8fa !important; border-left: 1.5pt solid #d5dee8 !important; }
+pre, blockquote, table { break-inside: avoid; }
+pre { white-space: pre-wrap; overflow-wrap: anywhere; }
+img, svg { max-width: 100%; height: auto; }
+table { width: 100%; border-collapse: collapse; }
+th, td { border: 0.4pt solid #dbe2ea; padding: 4pt; }
+a { color: #2059a4; text-decoration: none; }
+.content-subheading { bookmark-level: none; break-after: avoid; }
+
+/* NormPDF 0.2: page-safe image prompts and structured summaries. */
+.turn-heading { break-after: avoid-page !important; }
+.single-image-turn .prompt-card { break-inside: avoid-page !important; }
+.norm-image-gallery figure { break-inside: avoid-page !important; max-width: 100%; }
+.norm-image-gallery img { max-width: 100% !important; max-height: 103mm !important; height: auto !important; object-fit: contain; }
+.norm-image-gallery figcaption { font-size: 8pt; }
+.reasoning-segment .norm-quote { break-inside: auto !important; }
+.reasoning-segment .norm-quote p { margin: 0 0 4pt; white-space: normal; }
+.citation-unresolved { font-size: 8pt; color: #677586 !important; }
+
+/* Resolved assistant images: compact figures. */
+.norm-rich-gallery figure { display: inline-block; vertical-align: top; width: 47%; margin: 4px 1%; padding: 4px; break-inside: avoid-page !important; }
+.norm-rich-gallery img { max-height: 48mm !important; max-width: 100% !important; height: auto !important; object-fit: contain; }
+.turn-sources { break-inside: auto; }

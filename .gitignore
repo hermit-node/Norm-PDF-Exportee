@@ -1,0 +1,12 @@
+# Portable release artifacts — distributed as an attached tagged ZIP, not committed
+NormPDF/runtime/
+NormPDF/NormPDF.exe
+NormPDF/native-host.json
+dist/
+*.zip
+*.pdf
+*.log
+node_modules/
+__pycache__/
+*.pyc
+.DS_Store

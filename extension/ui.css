@@ -1,0 +1,46 @@
+#norm-local-launch {position:fixed!important;right:18px!important;bottom:24px!important;z-index:2147483644!important;
+  border:1px solid #555!important;border-radius:12px!important;box-shadow:0 3px 20px #0005!important;
+  background:#202832!important;color:white!important;font:600 13px system-ui!important;padding:10px 15px!important;
+  cursor:pointer!important;}
+#norm-local-launch:hover{background:#353f4d!important;}
+#norm-local-ui[hidden],.norm-exports[hidden]{display:none!important;}
+#norm-local-ui {all:initial;position:fixed!important;inset:0!important;z-index:2147483645!important;
+  background:#080c11bc!important;display:flex!important;align-items:center!important;justify-content:center!important;
+  font:14px/1.45 system-ui!important;color:#18212e!important;}
+#norm-local-ui *, .norm-print-overlay * {box-sizing:border-box!important;}
+#norm-local-ui .norm-shell {background:white!important;color:#18212e!important;width:min(92vw,730px)!important;
+  border-radius:14px!important;box-shadow:0 18px 80px #0007!important;overflow:hidden!important;}
+#norm-local-ui .norm-head {background:#202832!important;color:white!important;display:flex!important;
+  justify-content:space-between!important;align-items:center!important;padding:12px 20px!important;font-size:16px!important;}
+#norm-local-ui button:not(.norm-close) {font:600 13px system-ui!important;padding:9px 13px!important;
+  border:1px solid #bdc5cf!important;border-radius:7px!important;background:#f9fafb!important;color:#1d2939!important;
+  cursor:pointer!important;}
+#norm-local-ui button:disabled {opacity:.35!important;cursor:default!important;}
+#norm-local-ui .norm-close{border:0!important;color:white!important;background:transparent!important;
+  font-size:25px!important;cursor:pointer!important;}
+#norm-local-ui .norm-main{padding:16px 20px 22px!important;}
+#norm-local-ui .norm-small{font:12px/1.5 system-ui!important;color:#586174!important;margin:0 0 12px!important;}
+#norm-local-ui .norm-status{padding:11px!important;background:#f1f4f8!important;border-radius:7px!important;}
+#norm-local-ui .norm-summary{padding:12px!important;margin:10px 0!important;border:1px solid #ddd!important;
+ border-radius:7px!important;font-size:12px!important;}
+#norm-local-ui .norm-summary div {padding:2px 0!important;}
+#norm-local-ui .norm-summary details{margin-top:8px!important;max-height:190px!important;overflow:auto!important;}
+#norm-local-ui .norm-summary p{font:11px/1.4 system-ui!important;}
+#norm-local-ui .norm-accept{display:flex;gap:10px;align-items:center;margin:10px 0!important;
+ color:#8e3918!important;font-size:12px!important;}
+#norm-local-ui .norm-buttons,#norm-local-ui .norm-exports{display:flex!important;flex-wrap:wrap!important;gap:7px!important;margin:10px 0!important;}
+#norm-local-ui .norm-note{margin-top:16px!important;}
+.norm-print-overlay {position:fixed!important;inset:0!important;z-index:2147483646!important;background:#13161b!important;
+ display:flex!important;flex-direction:column!important;color:white!important;font:14px system-ui!important;}
+.norm-print-overlay .norm-print-bar{display:flex!important;align-items:center!important;gap:14px!important;
+ padding:11px 16px!important;flex-wrap:wrap!important;}
+.norm-print-bar span{margin-right:auto!important;}
+.norm-print-overlay button{background:white!important;color:#1a2028!important;border:0!important;border-radius:6px!important;
+ padding:10px 14px!important;font:600 13px system-ui!important;cursor:pointer!important;}
+.norm-print-overlay iframe{width:100%!important;flex:1!important;border:0!important;background:white!important;}
+
+#norm-local-ui .norm-template-label {display:flex!important;align-items:center!important;gap:6px!important;font:12px system-ui!important;color:#425066!important;}
+#norm-local-ui .norm-template{font:12px system-ui!important;padding:8px!important;border:1px solid #c1cbd7!important;border-radius:7px!important;background:#fff!important;}
+
+#norm-local-ui .norm-retry[hidden]{display:none!important;}
+#norm-local-ui .norm-check{appearance:checkbox!important;-webkit-appearance:checkbox!important;width:17px!important;height:17px!important;opacity:1!important;visibility:visible!important;flex:none!important;accent-color:#2463a7!important;}

@@ -1,0 +1,41 @@
+{
+  "manifest_version": 3,
+  "name": "Norm Hybrid Local Conversation Exporter",
+  "short_name": "Norm Local Export",
+  "version": "0.4.12",
+  "description": "Local ChatGPT conversation export with optional portable NormPDF Native Messaging; browser PDF/HTML/Markdown/JSON/ZIP",
+  "permissions": [
+    "nativeMessaging"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chatgpt.com/*",
+        "https://chat.openai.com/*"
+      ],
+      "js": [
+        "rich.js",
+        "capture.js",
+        "render.js",
+        "content.js"
+      ],
+      "css": [
+        "ui.css"
+      ],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": [
+    "https://*.oaiusercontent.com/*",
+    "https://oaiusercontent.com/*",
+    "https://images.openai.com/*",
+    "https://m.media-amazon.com/images/*",
+    "https://images-na.ssl-images-amazon.com/images/*",
+    "https://images-eu.ssl-images-amazon.com/images/*",
+    "https://images-fe.ssl-images-amazon.com/images/*"
+  ]
+}
