@@ -56,3 +56,6 @@ Third-party runtime redistribution information is in `THIRD_PARTY_NOTICES.md` an
 ## Data handling
 
 Conversation capture and local PDF production run on your machine. The extension can retrieve images from permitted first-party/explicit public image CDN hosts. Unresolved sources and missing images are identified rather than fabricated. The exporter never requires a remote PDF conversion service.
+
+## Publish to GitHub
+After authenticating GitHub CLI (\`gh auth login\`), run \`powershell -File scripts\publish-github.ps1\` from this folder. It creates the repository if missing (private by default), pushes \`main\` and \`v0.4.12\`, and uploads the complete portable ZIP plus SHA256SUMS as GitHub release assets. Use \`-Visibility public\` to create a public repository.
