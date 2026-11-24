@@ -1,5 +1,5 @@
 param(
-  [string]$Repository = 'hermit-node/Norm-PDF-Exporter',
+  [string]$Repository = 'hermit-node/Norm-PDF-Exportee',
   [ValidateSet('private','public')][string]$Visibility = 'private',
   [string]$Tag = 'v0.4.12'
 )
